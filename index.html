@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Age calculator app</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="boxes-inputs">
+      <div class="in-lab">
+        <label for="day">Day</label>
+        <input placeholder="DD" id="day"  min="1" max="31" >
+      </div>
+      <div class="in-lab">
+        <label for="month">Month</label>
+        <input placeholder="MM" id="month" min="1" max="12" required>
+      </div>
+      <div class="in-lab">
+        <label for="year">Year</label>
+        <input placeholder="YYYY" id="year"  min="1900" max="2024" required>
+        
+      </div>
+      <button class="btn" type="button">
+        <img src="https://api.iconify.design/solar:map-arrow-down-bold-duotone.svg?color=%23fafeff" alt="down-arrow">
+      </button>
+    </div>
+    <div class="result">
+      <p> <span class="num year"> --</span>years</p>
+      <p> <span class="num month"> --</span>months</p>
+      <p> <span class="num day"> --</span> days</p>
+    </div>
+
+  
+  
+  
+  </div>
+</body>
+</html>
