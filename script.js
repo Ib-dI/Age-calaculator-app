@@ -1,4 +1,4 @@
-console.log('connected')
+// console.log('connected')
 let date = new Date()
 let dateActuelle = new Date()
 
@@ -47,7 +47,7 @@ function ageCalculator(year, month, day) {
         difDay += new Date(dateActuelle.getFullYear(), dateActuelle.getMonth(), 0).getDate();
     }
 
-    console.log(difYear, difMonth, difDay);
+    // console.log(difYear, difMonth, difDay);
     spnYear.innerHTML = `${difYear} `;
     spnMonth.innerHTML = `${difMonth} `;
     spnDay.innerHTML = `${difDay} `;
