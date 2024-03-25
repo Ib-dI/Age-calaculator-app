@@ -6,9 +6,7 @@ let day = document.querySelector('#day'),
     month = document.querySelector('#month'),
     year = document.querySelector('#year')
 
-const   spnYear = document.querySelector('.year'),
-    spnMonth = document.querySelector('.month'),
-    spnDay = document.querySelector('.day'),
+const   result = document.querySelector('.result'),
     btnCalcul = document.querySelector('.btn'),
     title = document.querySelector('.title')
 
@@ -47,10 +45,11 @@ function ageCalculator(year, month, day) {
         difDay += new Date(dateActuelle.getFullYear(), dateActuelle.getMonth(), 0).getDate();
     }
 
-    // console.log(difYear, difMonth, difDay);
-    spnYear.innerHTML = `${difYear} `;
-    spnMonth.innerHTML = `${difMonth} `;
-    spnDay.innerHTML = `${difDay} `;
+    result.innerHTML = `
+                        <p> <span class="num year"> ${difYear} </span>year${difYear > 1 ? "s" : ""}</p>
+                        <p> <span class="num month"> ${difMonth} </span>month${difMonth > 1 ? "s" : ""}</p>
+                        <p> <span class="num day"> ${difDay} </span>day${difDay > 1 ? "s" : ""}</p>
+    `
 }
 
 function checkDate() {

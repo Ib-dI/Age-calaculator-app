@@ -8,7 +8,7 @@
 :root {
     /* colors */
     --purple: hsl(259, 100%, 65%);
-    --light-red: hsl(0, 100%, 67%);
+    --light-red: hsl(0, 96.8%, 43%);
     --white: hsl(0, 0%, 100%);
     --off-black: hsl(0, 0%, 8%);
     --off-white: hsl(0, 0%, 94%);
@@ -83,7 +83,7 @@ input:focus, input:hover{
     background-color: var(--purple);
     cursor: pointer;
     border: none;
-    transition: background-color 0.9s cubic-bezier(0.82, 0.21, 0.18, .98);
+    transition: background-color 0.4s cubic-bezier(0.82, 0.21, 0.18, .98);
 }
 .btn img {
     width: 30px;
