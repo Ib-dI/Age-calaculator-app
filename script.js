@@ -156,7 +156,36 @@ function checkDate() {
         yearLabel.classList.remove('error-label');
         year.classList.remove('error-input');
     }
+    const currentMonth = (new Date()).getMonth() + 1
+    console.log(currentMonth)
+    // Vérifier si le mois est dans le passé si inputYear = currentYear
+    if(parseInt(inputYear) === currentYear && parseInt(inputMonth) > currentMonth){
+        monthError.innerText = "Must be in the past"
+        monthLabel.classList.add('error-label');
+        month.classList.add('error-input');
+        return
+    }else{
+        // Supprimer les styles d'erreur
+        monthError.innerText = "";
+        monthLabel.classList.remove('error-label');
+        month.classList.remove('error-input');
+    }
+    const currentDay = (new Date()).getDate()
+    
+    // Vérifier si le jour est dans le passé si inputYear = currentYear et inputMonth = currentMonth
 
+    if(parseInt(inputYear) === currentYear && parseInt(inputMonth) === currentMonth && parseInt(inputDay) > currentDay){
+
+        dayError.innerText = "Must be in the past"
+        dayLabel.classList.add('error-label');
+        day.classList.add('error-input');
+        return
+    }else{
+        // Supprimer les styles d'erreur
+        dayError.innerText = "";
+        dayLabel.classList.remove('error-label');
+        day.classList.remove('error-input');
+    }
     // Si tous les champs sont valides, exécuter la fonction ageCalculator
     ageCalculator(inputYear, inputMonth, inputDay);
 }
