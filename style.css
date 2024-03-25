@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,800&display=swap');
-
 *::before,
 *::after {
     padding: 0;
@@ -25,8 +24,15 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
+
     align-items: center;
     background-color: var(--off-white);
+}
+.title {
+    font-size: 80px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
 }
 .container {
     width: 580px;
@@ -43,13 +49,12 @@ body {
     gap: 15px;
     text-align: left;
     color: var(--smokey-grey);
-    /* align-items: center; */
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     border-bottom: 2px solid var(--off-white);
 }
 label {
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 2px;
 }
@@ -79,7 +84,6 @@ input:focus, input:hover{
     cursor: pointer;
     border: none;
     transition: background-color 0.9s cubic-bezier(0.82, 0.21, 0.18, .98);
-
 }
 .btn img {
     width: 30px;
@@ -102,6 +106,19 @@ p {
 .num {
     color: var(--purple);
 }
+.error {
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--light-red);
+    margin-top: 5px;
+    width: fit-content;
+}
+.error-label {
+    color: var(--light-red);
+}
+.error-input {
+    border-color: var(--light-red);
+}
 @media (max-width: 680px) {
     .container{
         width: 80%;
@@ -120,13 +137,7 @@ p {
         font-size: 28px;
     }
 }
-
 @media (max-width: 391px) {
-    /* .container{
-        width: 80%;
-        height: 410px;
-        padding: 30px;
-    } */
     .boxes-inputs{
         width: 100%;
     }
